@@ -16,11 +16,12 @@ int[,] Matrix = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
 
 void PrintMartix()
 {
-    for (int j = 0; j <= Matrix.GetLength(1); j++)
+    for (int j = 0; j < Matrix.GetLength(0); j++)
     {
-        for (int i = 0; i <= Matrix.GetLength(0); i++)
+        Console.WriteLine();
+        for (int i = 0; i < Matrix.GetLength(1); i++)
         {
-            Console.Write(Matrix[i,j]);
+            Console.Write(Matrix[j,i]);
         }
     }
 }
@@ -45,9 +46,9 @@ void MatrixReorganiz(int rows)
     }
     }
 }
-for (int i = 0; i <= Matrix.GetLength(1); i++)
+for (int n = 0; n < Matrix.GetLength(0); n++)
 {
-    MatrixReorganiz(i);
+MatrixReorganiz(n);
 
 }
 PrintMartix();    
