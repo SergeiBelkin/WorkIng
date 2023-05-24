@@ -13,15 +13,24 @@
 */
 
 int[,] Matrix = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
-// Console.WriteLine(Matrix[1,3]);
 
+void PrintMartix()
+{
+    for (int j = 0; j <= Matrix.GetLength(1); j++)
+    {
+        for (int i = 0; i <= Matrix.GetLength(0); i++)
+        {
+            Console.Write(Matrix[i,j]);
+        }
+    }
+}
 void MatrixReorganiz(int rows)
 
 {
     for (int k = 0; k <= Matrix.GetLength(0); k++)
     {
 
-    // Console.Write(Matrix[rows,h]);
+     
     for (int i = 1, h = 0, Max = 0; i <= Matrix.GetLength(0); h++, i++)
     {
         
@@ -36,10 +45,12 @@ void MatrixReorganiz(int rows)
     }
     }
 }
-
-MatrixReorganiz(1);
-for (int i = 0; i <= Matrix.GetLength(0); i++)
+for (int i = 0; i <= Matrix.GetLength(1); i++)
 {
-    Console.Write(Matrix[1,i]);
+    MatrixReorganiz(i);
+
 }
+PrintMartix();    
+    
+
 
