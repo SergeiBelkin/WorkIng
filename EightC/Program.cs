@@ -99,24 +99,56 @@ int SummRows(int[,]Matrix,int Rows)
 */
 
 
-int rows = ParseText("введите строк");
-int column = ParseText("введите столбцов");
+// int rows = ParseText("введите строк");
+// int column = ParseText("введите столбцов");
 
+// int[,] Matrix2 = new int[column, rows];
+
+// FillMatrix(Matrix2);
+
+
+
+// int minIndex = 0;
+// for (int h = 0, minSumm = SummRows(Matrix2,0); h < Matrix2.GetLength(0); h++)
+// {
+    
+//     if (SummRows(Matrix2, h) < minSumm)
+//     {
+//         minIndex = h;
+//     }
+    
+// }
+// Console.WriteLine();
+// Console.WriteLine("Строка с наименьшей суммой элементов: "+(minIndex+1));
+
+
+/*
+Задача 58: Задайте два двумерных массива (от 0 до 10). Напишите программу, которая будет находить произведение двух массивов (поэлементное).
+Например, даны 2 массива:
+2 4
+3 2
+
+3 4
+3 3
+Результирующая матрица будет:
+6 16
+9 6
+*/
+
+int column = ParseText("Введите количество строк двух массивов");
+int rows = ParseText("Введите количество столбцов двух массивов");
 int[,] Matrix2 = new int[column, rows];
-
+int[,] Matrix3 = new int[column, rows];
 FillMatrix(Matrix2);
-
-
-
-int minIndex = 0;
-for (int h = 0, minSumm = SummRows(Matrix2,0); h < Matrix2.GetLength(0); h++)
-{
-    
-    if (SummRows(Matrix2, h) < minSumm)
-    {
-        minIndex = h;
-    }
-    
-}
 Console.WriteLine();
-Console.WriteLine("Строка с наименьшей суммой элементов: "+(minIndex+1));
+FillMatrix(Matrix3);
+for (int i = 0; i < Matrix3.GetLength(0); i++)
+{
+    Console.WriteLine();
+    for (int j = 0; j < Matrix3.GetLength(1); j++)
+    {
+        Matrix3[j,i] *= Matrix2[j,i];
+        Console.Write(Matrix3[j,i]+"  "); 
+    }
+}
+
