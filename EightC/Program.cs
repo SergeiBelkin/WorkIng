@@ -18,7 +18,7 @@ void FillMatrix(int[,] Matrix)
 
 }
 
-int SummRows(int[,]Matrix,int Rows)
+int SummRows(int[,] Matrix, int Rows)
 {
     int resultSumm = 0;
     for (int i = 0, result = 0; i < Matrix.GetLength(0); i++)
@@ -27,7 +27,7 @@ int SummRows(int[,]Matrix,int Rows)
         resultSumm = result;
     }
     return resultSumm;
-     
+
 }
 /*
 Задача 54: Задайте двумерный массив. Напишите программу, 
@@ -111,12 +111,12 @@ int SummRows(int[,]Matrix,int Rows)
 // int minIndex = 0;
 // for (int h = 0, minSumm = SummRows(Matrix2,0); h < Matrix2.GetLength(0); h++)
 // {
-    
+
 //     if (SummRows(Matrix2, h) < minSumm)
 //     {
 //         minIndex = h;
 //     }
-    
+
 // }
 // Console.WriteLine();
 // Console.WriteLine("Строка с наименьшей суммой элементов: "+(minIndex+1));
@@ -135,20 +135,55 @@ int SummRows(int[,]Matrix,int Rows)
 9 6
 */
 
-int column = ParseText("Введите количество строк двух массивов");
-int rows = ParseText("Введите количество столбцов двух массивов");
-int[,] Matrix2 = new int[column, rows];
-int[,] Matrix3 = new int[column, rows];
-FillMatrix(Matrix2);
-Console.WriteLine();
-FillMatrix(Matrix3);
-for (int i = 0; i < Matrix3.GetLength(0); i++)
-{
-    Console.WriteLine();
-    for (int j = 0; j < Matrix3.GetLength(1); j++)
-    {
-        Matrix3[j,i] *= Matrix2[j,i];
-        Console.Write(Matrix3[j,i]+"  "); 
-    }
-}
+// int column = ParseText("Введите количество строк двух массивов");
+// int rows = ParseText("Введите количество столбцов двух массивов");
+// int[,] Matrix2 = new int[column, rows];
+// int[,] Matrix3 = new int[column, rows];
+// FillMatrix(Matrix2);
+// Console.WriteLine();
+// FillMatrix(Matrix3);
+// for (int i = 0; i < Matrix3.GetLength(0); i++)
+// {
+//     Console.WriteLine();
+//     for (int j = 0; j < Matrix3.GetLength(1); j++)
+//     {
+//         Matrix3[j,i] *= Matrix2[j,i];
+//         Console.Write(Matrix3[j,i]+"  "); 
+//     }
+// }
+
+
+/*
+Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+Напишите программу, которая будет построчно выводить массив, 
+добавляя индексы каждого элемента.
+Массив размером 2 x 2 x 2
+66(0,0,0) 25(0,1,0)
+34(1,0,0) 41(1,1,0)
+27(0,0,1) 90(0,1,1)
+26(1,0,1) 55(1,1,1)
+*/
+
+// void FillMatrix3d(int[,,] Matrix)
+// {
+//     for (int i = 0; i < Matrix.GetLength(2); i++)
+//     {
+//         Console.WriteLine();
+//         for (int k = 0; k < Matrix.GetLength(0); k++)
+//         {
+//             Console.WriteLine();
+//             for (int j = 0; j < Matrix.GetLength(1); j++)
+//             {
+//                 Matrix[k, j, i] = new Random().Next(0, 10);
+//                 Console.Write(Matrix[k, j, i]+"("+k+","+j+","+i+ ")");
+//             }
+//         }
+//     }
+
+// }
+// int x = ParseText("введите ширину трехмерного массива");
+// int y = ParseText("введите длинну трехмерного массива");
+// int z = ParseText("введите глубину трехмерного массива");
+// int[,,] Matrix3d = new int[x, y, z];
+// FillMatrix3d(Matrix3d);
 
