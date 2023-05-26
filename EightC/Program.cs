@@ -174,7 +174,7 @@ int SummRows(int[,] Matrix, int Rows)
 //             Console.WriteLine();
 //             for (int j = 0; j < Matrix.GetLength(1); j++)
 //             {
-//                 Matrix[k, j, i] = new Random().Next(0, 10);
+//                 Matrix[k, j, i] = new Random().Next(10, 99);
 //                 Console.Write(Matrix[k, j, i]+"("+k+","+j+","+i+ ")");
 //             }
 //         }
@@ -187,3 +187,11 @@ int SummRows(int[,] Matrix, int Rows)
 // int[,,] Matrix3d = new int[x, y, z];
 // FillMatrix3d(Matrix3d);
 
+/*
+Доп.Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
+*/
