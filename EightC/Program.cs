@@ -164,28 +164,30 @@ int SummRows(int[,] Matrix, int Rows)
 26(1,0,1) 55(1,1,1)
 */
 
-// void FillMatrix3d(int[,,] Matrix)
-// {
-//     for (int i = 0; i < Matrix.GetLength(2); i++)
-//     {
-//         Console.WriteLine();
-//         for (int k = 0; k < Matrix.GetLength(0); k++)
-//         {
-//             Console.WriteLine();
-//             for (int j = 0; j < Matrix.GetLength(1); j++)
-//             {
-//                 Matrix[k, j, i] = new Random().Next(10, 99);
-//                 Console.Write(Matrix[k, j, i]+"("+k+","+j+","+i+ ")");
-//             }
-//         }
-//     }
+void FillMatrix3d(int[,,] Matrix)
+{
+    int n = 10;
+    for (int i = 0; i < Matrix.GetLength(2); i++)
+    {
+        Console.WriteLine();
+        for (int k = 0; k < Matrix.GetLength(0); k++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < Matrix.GetLength(1); j++)
+            {
+                Matrix[k, j, i] = n;
+                n++;
+                Console.Write(Matrix[k, j, i]+"("+k+","+j+","+i+ ")");
+            }
+        }
+    }
 
-// }
-// int x = ParseText("введите ширину трехмерного массива");
-// int y = ParseText("введите длинну трехмерного массива");
-// int z = ParseText("введите глубину трехмерного массива");
-// int[,,] Matrix3d = new int[x, y, z];
-// FillMatrix3d(Matrix3d);
+}
+int x = ParseText("введите ширину трехмерного массива");
+int y = ParseText("введите длинну трехмерного массива");
+int z = ParseText("введите глубину трехмерного массива");
+int[,,] Matrix3d = new int[x, y, z];
+FillMatrix3d(Matrix3d);
 
 /*
 Доп.Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
